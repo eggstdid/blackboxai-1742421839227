@@ -1,0 +1,21 @@
+{
+    "gemini": {
+        "apiKey": "YOUR_GEMINI_API_KEY_HERE",
+        "batchSize": 3,
+        "retryAttempts": 3,
+        "retryDelay": 1000
+    },
+    "app": {
+        "supportedImageFormats": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
+        "maxFileSize": 5242880,
+        "thumbnailSize": {
+            "width": 100,
+            "height": 100
+        }
+    },
+    "export": {
+        "defaultFilename": "image-metadata.csv",
+        "encoding": "utf-8",
+        "delimiter": ","
+    }
+}
