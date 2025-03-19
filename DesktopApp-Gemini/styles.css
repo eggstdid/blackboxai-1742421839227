@@ -1,0 +1,137 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Font settings */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Drag and drop animations */
+#dropZone.drag-over {
+    border-color: #3B82F6;
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Image thumbnail styles */
+.image-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Tags styling */
+.tag {
+    display: inline-block;
+    background-color: #E5E7EB;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin: 0.25rem;
+}
+
+/* Progress bar animation */
+@keyframes progress-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.progress-animate {
+    animation: progress-animation 2s ease-in-out infinite;
+}
+
+/* Error toast animation */
+@keyframes slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-out {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+
+.toast-enter {
+    animation: slide-in 0.3s ease-out forwards;
+}
+
+.toast-exit {
+    animation: slide-out 0.3s ease-out forwards;
+}
+
+/* Table hover effects */
+.metadata-row:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* Button hover effects */
+.btn-hover-effect {
+    transition: transform 0.2s ease;
+}
+
+.btn-hover-effect:hover {
+    transform: translateY(-1px);
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid #3B82F6;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Image preview modal */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+/* Disable selection on buttons */
+button {
+    user-select: none;
+}
